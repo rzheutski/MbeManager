@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="design-edit-styles.css">
+</head>
+
+<body>
+<table id="editTab" class="sortable" border="1" cellpadding="5px" border-spacing="0px" align="center" onclick="rowNumbering(this.id)">
+	<caption><i>Al<sub>x</sub>In<sub>y</sub>Ga<sub>1-x-y</sub>N</i> layer parameters</caption> 
+        <tr align="center">
+            <th>#</th>
+            <th>Mode</th>
+            <th>Thickness, nm</th>
+    		<th><i>x</i></th>
+    		<th><i>y</i></th>
+    		<th>Temperature,C</th>
+    		<th>Substrate heat, %</th>
+    		<th>N* or NH<sub>3</sub> flow, sccm</th>
+    		<th>Dopant</th>
+        </tr>
+    	<tr id="values" >
+    		<td align="center"></td>
+    		<td align="center">
+    			<select id="mode">
+  					<option>Ammonia</option>
+  					<option>Plasma</option>
+				</select>
+    		</td>
+    		<td align="center"><input type="number" id="thickness" value="" min="0" /></td>
+    		<td align="center"><input type="text" id="x" value="" size="7" /></td>
+    		<td align="center"><input type="text" id="y" value="" size="7"/></td>
+    		<td align="center"><input type="text" id="temperature" value="" size="7"/></td>
+    		<td align="center"><input type="text" id="heat" value="" size="7"/></td>
+    		<td align="center"><input type="text" id="Nflow" value="" size="7"/></td>
+    		<td align="center"><select id="dopant">
+  					<option>none</option>
+  					<option>Si</option>
+  					<option>Mg</option>
+				</select>
+			</td>
+            <td align="center">
+
+                    <div style="display: block; margin: 0 auto; width: 4.5em;">
+                    <input type="submit" name="addButton" id="addLayerButton" value="+" style="color:#008000" onclick="addLayer(this.parentNode.parentNode.parentNode.rowIndex)">
+                    <input type="submit" name="modifyButton" id="addLayerButton" value="&#8212;" style="color:#800000" onclick="deleteLayer(this.parentNode.parentNode.parentNode.rowIndex)"
+
+                    />
+                    </div>
+                
+                
+                
+            </td>
+			
+    	</tr>
+</table>
+
+
+
+</body>
+<script src="tab.js"></script>
+</html>

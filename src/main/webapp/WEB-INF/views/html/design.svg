@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="210mm" height="297mm" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 210 297"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#1F1A17;stroke-width:0.0762}
+    .fil0 {fill:none}
+    .fil3 {fill:#1F1A17}
+    .fil2 {fill:#272376}
+    .fil1 {fill:#FFF500}
+    .fil4 {fill:white}
+    .fnt0 {font-weight:normal;font-size:8.4667;font-family:'Arial'}
+    .fnt1 {font-weight:bold;font-size:8.4667;font-family:'Arial'}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0 str0" x="61.0953" y="76.3398" width="70.4214" height="26.082"/>
+  <polygon class="fil1 str0" points="131.517,76.3398 61.0953,76.3398 61.0953,102.422 131.517,102.422 "/>
+  <rect class="fil0 str0" x="56.9529" y="102.124" width="80.8542" height="24.7779"/>
+  <polygon class="fil2 str0" points="137.807,102.124 56.9529,102.124 56.9529,126.901 137.807,126.901 "/>
+  <text x="69.7893" y="91.1196"  class="fil3 fnt0">AlGaN</text>
+  <text x="79.1226" y="114.73"  class="fil4 fnt1">GaN</text>
+ </g>
+</svg>

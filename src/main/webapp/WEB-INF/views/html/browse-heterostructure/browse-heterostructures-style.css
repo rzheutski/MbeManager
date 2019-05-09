@@ -1,0 +1,145 @@
+.{
+	font-family: Arial;
+}
+
+header p {
+	color: #021859;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	font-family: Arial;
+	text-transform: uppercase;
+}
+
+.recently-viewed {
+	float: left;
+	/*height: 800px;*/
+	border-width: 0px;
+	border-color: green;
+	border-style: solid;
+}
+
+.recently-viewed p {
+	padding-top: 1em;
+}
+
+.main-frame {
+	float: left;
+	border-width: 0px;
+	border-color: blue;
+	border-style: solid;
+	overflow: hidden;
+}
+
+.main-buttons {
+/*	float: left;*/
+	width: 1000%;
+	border-width: 0px;
+	border-color: yellow;
+	border-style: solid;
+	
+}
+
+.end-div {
+	/*width: 100%;*/
+	clear: both;
+	border-width: 0px;
+	border-color: black;
+	border-style: solid;
+}
+
+#search-form {
+	float: left;
+	padding: 10px 10px 10px 70px;
+}
+
+#new-heterostructure {
+	float: left;
+	padding: 10px 10px 10px 70px;
+}
+
+.viewed-button {
+	
+	color: #000;
+	font-weight: bold;
+	user-select: none; /* Убираем текстовое выделение */
+	text-decoration: none;	/* Убираем подчеркивание */
+/*	outline: none; /* Убираем контур вокруг ссылки */
+	background-color: rgb(206,220,231); /* Цвет фона */
+	padding: 0.5em; /* Отступ от текста до рамки */
+	border-width: 0px;
+	border-color: #021859;
+	border-style: solid;
+	border-radius: 1px;
+	}
+	a.viewed-button:hover {
+	color: #fff;
+	background-color: #021859; /* Цвет кнопки при наведении курсора */
+}
+
+.heterostructure-name {
+	float: left;
+	font-size: 16px;
+	padding: 0.5em;
+	/*font-weight: bold;*/
+}
+
+.main-button1 {
+	float: left;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	/*position: relative;*/
+  	display: inline-block;
+  	padding: 0.5em;
+  	/*line-height: 2.4em;*/
+ 	vertical-align: middle;
+  	text-align: center;
+  	text-decoration: none;
+  	user-select: none;
+  	color: #000;
+  	outline: none;
+  	border: 1px solid rgba(110,121,128,.8);
+  	border-top-color: rgba(0,0,0,.3);
+  	border-radius: 3px;
+  	background: rgb(206, 220, 231) linear-gradient(rgb(206,220,231), rgb(89,106,114));
+  	/*box-shadow:
+   		0 -1px rgba(10,21,28,.9) inset,
+   		0 1px rgba(255,255,255,.5) inset;*/
+}
+
+.main-button1:hover {
+  background: linear-gradient(#d2dfea, #71828c);
+}
+
+.svg-structure {
+	float: left;
+	padding: 0px;
+	border-width: 0px;
+	border-color: pink;
+	border-style: solid;
+}
+
+.main-window {
+	}
+
+.text-info {
+	float: left;
+	height: 100%;
+	width: 400px;
+	
+	border-width: 0px;
+	border-color: red;
+	border-style: solid;
+	}
+
+.text-info .head-info {
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.text-info p {
+	padding: 0.5em;
+}

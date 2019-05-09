@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <!-- Base Define -->
+    <definition name="base.definition"
+                template="/WEB-INF/views/layouts/mainlayout.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/views/basefragments/_header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/basefragments/_menu.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/views/basefragments/_footer.jsp" />
+    </definition>
+
+    <!-- Main Page -->
+    <definition name="mainPage" extends="base.definition">
+        <put-attribute name="title" value="MBE manager" />
+        <put-attribute name="body" value="/WEB-INF/views/bodyfragments/_home.jsp" />
+    </definition>
+
+    <!-- Browse HsFromJsp Page -->
+    <definition name="browseHeterostructurePage" extends="base.definition">
+        <put-attribute name="title" value="Журнал гетероструктур" />
+        <put-attribute name="body" value="/WEB-INF/views/bodyfragments/_browseHS.jsp" />
+    </definition>
+
+    <!-- Create HsFromJsp Page -->
+    <definition name="editHeterostructurePage" extends="base.definition">
+        <put-attribute name="title" value="Добавить гетероструктуру" />
+        <put-attribute name="body" value="/WEB-INF/views/bodyfragments/_createHS.jsp" />
+    </definition>
+
+    <!-- ContactUs Page -->
+    <definition name="contactusPage" extends="base.definition">
+        <put-attribute name="title" value="Contact Us" />
+        <put-attribute name="body" value="/WEB-INF/views/bodyfragments/_contactus.jsp" />
+    </definition>
+
+
+
+</tiles-definitions>

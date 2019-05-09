@@ -1,0 +1,131 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+	font-family: Arial;
+	padding: 0;
+	margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-width: 0px;
+    border-color: deeppink;
+    border-style: solid;
+}
+
+.main-header {
+	flex-basis: 200px;
+	flex-shrink: 0;
+	width: 100%;
+    background-image: linear-gradient(#101020, #202050);
+    overflow: hidden;
+}
+
+.main-header .mbe-header h1 {
+	white-space: nowrap;
+	color: #cccccc;
+	margin: 0;
+	padding: 40px 0 0 40px;
+	font-family: Times new roman;
+	font-size: 48px;
+	font-weight: bold;
+
+}
+
+.main-header .mbe-header #spacer {
+	background-color: #cccccc;
+	margin-left: 40px;
+	height: 4px;
+	width: 500px;
+}
+
+.main-header .mbe-header p {
+	text-align: left;
+	white-space: nowrap;
+	color: #ffffff;
+	margin: 0;
+	padding: 20px 0 0 40px;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+#main-section {
+	background-color: #dddddd;
+	padding: 10px;
+	margin-left: 40px;
+	margin-right: 40px;
+	flex-grow: 1;
+    display: flex;
+	/*overflow: hidden;*/
+}
+
+#main-button-group {
+	float: left;
+	padding: 40px 20px 20px 20px;
+    flex-shrink: 0;
+}
+
+.main-button {
+	min-height: 75px;
+	min-width: 200px;
+	background-color: #202050;
+	color: #cccccc;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.main-button:hover {
+  background-color: #4040A0;
+}
+
+#content {
+	width: 30px;
+    flex-grow: 1;
+	/*height: 200px;*/
+	padding: 20px;
+	float: left;
+	background-color: #eeeeee;
+    border-width: 1px;
+    border-color: #bbbbbb;
+    border-style: solid;
+}
+
+.main-button1 {
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    /*position: relative;*/
+    display: inline-block;
+    padding: 0.5em;
+    /*line-height: 2.4em;*/
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    color: #000;
+    outline: none;
+    border: 1px solid rgba(110,121,128,.8);
+    border-top-color: rgba(0,0,0,.3);
+    border-radius: 3px;
+    background: rgb(206, 220, 231) linear-gradient(rgb(206,220,231), rgb(89,106,114));
+}
+
+footer {
+    background-color: #101020;
+	color: white;
+	flex-shrink: 0;
+	flex-basis: 50px;
+	text-align: center;
+	padding-top: 10px;
+} 

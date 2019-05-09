@@ -1,0 +1,46 @@
+input[type=number]{
+    width: 80px; 
+} 
+
+input, select {
+    font-size: 15px;
+}
+
+#seqnum {
+    width: 40px; 
+}
+
+
+#addLayerButton {
+    width: 2em;
+    height: 2em;
+    margin: 2px;
+    float: left;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    /*position: relative;*/
+    display: inline-block;
+    /*padding: 0.5em;*/
+    /*line-height: 2.4em;*/
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    /*color: #FF0000;*/
+    outline: none;
+    border: 1px solid rgba(110,121,128,.8);
+    border-top-color: rgba(0,0,0,.3);
+    border-radius: 3px;
+    background: rgb(206, 220, 231);
+ }   
+    #addLayerButton:hover {
+    color: #fff;
+    background: rgb(70, 70, 120); /* Цвет кнопки при наведении курсора */
+}
+
+    #addLayerButton:active {
+    color: #fff;
+    background: rgb(50, 50, 80); /* Цвет кнопки при нажатии */
+}
+

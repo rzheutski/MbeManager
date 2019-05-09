@@ -1,0 +1,101 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial;
+	padding: 0;
+	margin: 0;
+}
+
+.main-header {
+	height:200px;
+	min-width: 1400px;
+    background-image: linear-gradient(#101020, #202050);
+    overflow: hidden;
+}
+
+.main-header .mbe-header h1 {
+	white-space: nowrap;
+	
+	color: #cccccc;
+	margin: 0;
+	padding: 40px 0 0 40px;
+	font-family: Times new roman;
+	font-size: 48px;
+	font-weight: bold;
+
+}
+
+.main-header .mbe-header #spacer {
+	background-color: #cccccc;
+	margin-left: 40px;
+	height: 4px;
+	width: 500px;
+}
+
+.main-header .mbe-header p {
+	text-align: left;
+	white-space: nowrap;
+	color: #ffffff;
+	margin: 0;
+	padding: 20px 0 0 40px;
+	font-size: 24px;
+	font-weight: bold;
+
+}
+
+#main-section {
+
+	background-color: #dddddd;
+	padding: 10px;
+	margin-left: 40px;
+	margin-right: 40px;
+	border-width: 0px;
+	border-color: green;
+	border-style: solid;
+	overflow: hidden;
+}
+
+#main-button-group {
+	height: 100%;
+	float: left;
+	padding: 40px 20px 20px 20px;
+	border-width: 0px;
+	border-color: blue;
+	border-style: solid;
+
+}
+
+.main-button {
+	min-height: 75px;
+	min-width: 200px;
+	background-color: #202050;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.main-button:hover {
+  background-color: #4040A0;
+}
+
+#content {
+	width: 1500px;
+	padding: 20px;
+	float: left;
+	background-color: #eeeeee;
+	border-width: 0px;
+	border-color: red;
+	border-style: solid;
+	overflow: visible;
+}
+
+footer {
+	background-color: #101020;
+	color: white;
+	height: 50px;
+	text-align: center;
+	padding-top: 10px;
+} 

@@ -1,0 +1,144 @@
+{
+	font-family: Arial;
+}
+
+header p {
+	padding-bottom: 1em;
+	color: #021859;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	font-family: Arial;
+	text-transform: uppercase;
+}
+
+.recently-viewed {
+	padding-right: 1em;
+	float: left;
+	/*height: 800px;*/
+	border-width: 0px;
+	border-color: green;
+	border-style: solid;
+}
+
+.recently-viewed p {
+	padding-top: 1em;
+}
+
+.main-frame {
+	float: left;
+	border-width: 0px;
+	border-color: blue;
+	border-style: solid;
+	overflow: hidden;
+}
+
+.main-buttons {
+/*	float: left;*/
+	width: 1000%;
+	border-width: 0px;
+	border-color: yellow;
+	border-style: solid;
+	
+}
+
+.end-div {
+	/*width: 100%;*/
+	clear: both;
+	border-width: 0px;
+	border-color: black;
+	border-style: solid;
+}
+
+#search-form {
+	float: left;
+	padding: 10px 10px 10px 70px;
+}
+
+#new-heterostructure {
+	float: left;
+	padding: 10px 10px 10px 70px;
+}
+
+.viewed-button {
+	
+	margin: 5px;
+	color: #000;
+	font-weight: bold;
+	user-select: none; /* Убираем текстовое выделение */
+	text-decoration: none;	/* Убираем подчеркивание */
+/*	outline: none; /* Убираем контур вокруг ссылки */
+	background-color: rgb(206,220,231); /* Цвет фона */
+	padding: 0.5em; /* Отступ от текста до рамки */
+	border-width: 0px;
+	border-color: #021859;
+	border-style: solid;
+	border-radius: 1px;
+	}
+	a.viewed-button:hover {
+	color: #fff;
+	background-color: #021859; /* Цвет кнопки при наведении курсора */
+}
+
+.heterostructure-name {
+	float: left;
+	font-size: 16px;
+	padding: 0.5em;
+	/*font-weight: bold;*/
+}
+
+
+.main-button1:hover {
+  background: linear-gradient(#d2dfea, #71828c);
+}
+
+.svg-structure {
+	margin-right: 0.5em;
+	padding-right: 1em;
+	padding-left: 1em;
+	width: auto;
+	background-color: white;
+	/*display: inline-block;*/
+	/*height:auto;*/
+	/*overflow: scroll;*/
+	float: left;
+	border-width: 1px;
+	border-color: #aaaaaa;
+	border-style: solid;
+	border-radius: 5px;
+}
+
+.main-window {
+	padding: 0.5em;
+	background-color: #eeeeee;
+	display: flex;
+	/*height: 100px;*/
+	/*overflow: scroll;*/
+	width: auto;
+	border-width: 0px;
+	border-color: #bbbbbb;
+	border-style: solid;
+	border-radius: 5px;
+	}
+
+.text-info {
+	padding: 1em;
+	float: left;
+	width: 400px;	
+	background-color: white;
+	border-width: 1px;
+	border-color: #aaaaaa;
+	border-style: solid;
+	border-radius: 5px;
+	}
+
+.text-info .head-info {
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.text-info p {
+	padding: 0.5em;
+}
