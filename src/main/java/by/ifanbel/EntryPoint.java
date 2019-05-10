@@ -38,7 +38,7 @@ public class EntryPoint {
     public String saveHeterostructure(HsFromJsp hsFromJsp) {
 
         System.out.println(hsFromJsp.getSampleNumber());
-        System.out.println(Arrays.asList(hsFromJsp.getThickness()));
+        System.out.println(Arrays.asList(hsFromJsp.getGrowthMode()));
         /*System.out.println(Arrays.asList(hsFromJsp.getX()));*/
         new ModelAndView().addObject(hsFromJsp);
      //   System.out.println(hsFromJsp.getLayersFromJsp().get(0).getGrowthMode());

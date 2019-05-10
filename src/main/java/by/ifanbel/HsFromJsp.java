@@ -9,9 +9,15 @@ public class HsFromJsp {
         growersLastNames = "some growers";
         /*layersFromJsp.add(new LayerFromJsp("kolya"));
         layersFromJsp.add(new LayerFromJsp("privet"));*/
+        layerId = new ArrayList<Integer>();
+        layerId.add(1);
+        layerId.add(2);
         thickness = new ArrayList<Double>();
         thickness.add(12.0);
         thickness.add(1500.0);
+        growthMode = new ArrayList<String>();
+        growthMode.add("1");
+        growthMode.add("2");
 }
 
     private String sampleNumber;
@@ -31,6 +37,7 @@ public class HsFromJsp {
     }*/
 
 
+    private  List<Integer> layerId;
     private List<String> growthMode;
     private List<Double> thickness;
     private List<String> x;
@@ -88,6 +95,14 @@ public class HsFromJsp {
     }
     public void setComments(String comments) {
         this.comments = comments;
+    }
+
+    public List<Integer> getLayerId() {
+        return layerId;
+    }
+
+    public void setLayerId(List<Integer> layerId) {
+        this.layerId = layerId;
     }
 
     public List<String> getGrowthMode() {

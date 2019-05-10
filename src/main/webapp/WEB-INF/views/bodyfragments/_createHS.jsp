@@ -71,11 +71,23 @@
     </tr>
 
 
-    <c:forEach items="${hsFromJsp.thickness}" var="value" varStatus="loop">
+    <c:forEach items="${hsFromJsp.layerId}" var="id" varStatus="loop">
 
     <tr id="layerRow" >
-        <%--<td align="center">"${hsFromJsp.layersFromJsp[0].growthMode}"</td>--%>
-        <td align="center">${layer.growthMode}</td>
+        <td align="center" name="layerId">${id}</td>
+        <%--<td align="center">${layer.growthMode}</td>--%>
+        <td align="center">
+            <select id="mode" name="growthMode" value="${hsFromJsp.growthMode[loop.index]}">
+                <option value="1"
+                <c:if test="${hsFromJsp.growthMode[loop.index] == 1}">
+                        <c:out value="selected"/></c:if>
+                >NH<sub>3</sub></option>
+                <option value="2"
+                        <c:if test="${hsFromJsp.growthMode[loop.index] == 2}">
+                            <c:out value="selected"/></c:if>
+                >N*</option>
+            </select>
+        </td>
         <td align="center"><input type="number" name="thickness" value="${hsFromJsp.thickness[loop.index]}" size="7"/></td>
             <%--<td align="center"><sf:input type="text" path="layer.growthMode" size="7"/></td>--%>
 
