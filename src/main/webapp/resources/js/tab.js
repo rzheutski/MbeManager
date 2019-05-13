@@ -24,6 +24,6 @@ function deleteLayer(rowIndex) {
 function rowNumbering(id) {
     var table = d.getElementById(id).getElementsByTagName('TBODY')[0];
     for (rowIndex = 2; rowIndex < table.rows.length; rowIndex++) {
-        table.rows[rowIndex].cells[0].innerHTML = rowIndex-1;
+        table.rows[rowIndex].getElementsByTagName('input')[0].value = rowIndex-1;
     }
 }

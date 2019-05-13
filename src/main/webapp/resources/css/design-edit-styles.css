@@ -52,10 +52,25 @@ td input, select {
 
 }
 
-.row1 input, select, datalist, option {
+.row1 input, datalist, option {
     margin: 2px;
     font-size: 15px;
     width: 8em; 
+    text-align: center;
+}
+
+select {
+    margin: 2px;
+    font-size: 15px;
+    width: 5em;
+    text-align: center;
+}
+
+#inputAsLabel {
+    border: none;
+    border-color: transparent;
+    background-color: transparent;
+    width: 3em;
     text-align: center;
 }
 

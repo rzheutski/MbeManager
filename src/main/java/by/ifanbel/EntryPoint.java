@@ -2,11 +2,13 @@ package by.ifanbel;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -35,15 +37,19 @@ public class EntryPoint {
     }
 
     @RequestMapping(value = { "/saveHeterostructure" }, method = RequestMethod.POST)
-    public String saveHeterostructure(HsFromJsp hsFromJsp) {
+    public String saveHeterostructure(@Valid HsFromJsp hsFromJsp, BindingResult bindingResult) {
 
-        System.out.println(hsFromJsp.getSampleNumber());
-        System.out.println(Arrays.asList(hsFromJsp.getGrowthMode()));
-        /*System.out.println(Arrays.asList(hsFromJsp.getX()));*/
+        System.out.println(Arrays.asList(hsFromJsp.getLayerId()));
+
+        System.out.println(bindingResult.hasErrors());
+       // System.out.println(bindingResult.getAllErrors().get(0).getDefaultMessage());
+        System.out.println(Arrays.asList(hsFromJsp.getY()));
+
+
+
+
+
         new ModelAndView().addObject(hsFromJsp);
-     //   System.out.println(hsFromJsp.getLayersFromJsp().get(0).getGrowthMode());
-     //   System.out.println(hsFromJsp.getDate());
-     //   System.out.println(hsFromJsp.getWaferSize());
 
         return "editHeterostructurePage";
     }

@@ -1,23 +1,23 @@
 package by.ifanbel;
 
+import by.ifanbel.guiValidation.PatternForListOfString;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class HsFromJsp {
 
     public HsFromJsp() {
-        growersLastNames = "some growers";
-        /*layersFromJsp.add(new LayerFromJsp("kolya"));
-        layersFromJsp.add(new LayerFromJsp("privet"));*/
-        layerId = new ArrayList<Integer>();
-        layerId.add(1);
-        layerId.add(2);
-        thickness = new ArrayList<Double>();
-        thickness.add(12.0);
-        thickness.add(1500.0);
-        growthMode = new ArrayList<String>();
-        growthMode.add("1");
-        growthMode.add("2");
+      layerId.add(1);
+      growthMode.add("1");
+      thickness.add(0.0);
+      x.add("");
+      y.add("");
+      temperature.add("");
+      heat.add("");
+      nflow.add("");
+      dopant.add("1");
+      layerComment.add("");
 }
 
     private String sampleNumber;
@@ -28,25 +28,19 @@ public class HsFromJsp {
     private String substrate;
     private String comments;
 
-/*    private List<LayerFromJsp> layersFromJsp = new ArrayList<LayerFromJsp>();
-    public List<LayerFromJsp> getLayersFromJsp() {
-         return layersFromJsp;
-    }
-    public void setLayersFromJsp(List<LayerFromJsp> layersFromJsp) {
-        this.layersFromJsp = layersFromJsp;
-    }*/
+    private List<Integer> layerId = new ArrayList<Integer>();
+    private List<String> growthMode = new ArrayList<String>();
+    private List<Double> thickness = new ArrayList<Double>();
 
+    @PatternForListOfString (regexp = "((1(\\.0+)?)|(0\\.\\d*))(-((1(\\.0+)?)|(0\\.\\d*)))?", message = "Неверно задан параметр x")
+    private List<String> x = new ArrayList<String>();
 
-    private  List<Integer> layerId;
-    private List<String> growthMode;
-    private List<Double> thickness;
-    private List<String> x;
-    private List<String> y;
-    private List<String> temperature;
-    private List<String> heat;
-    private List<String> Nflow;
-    private List<String> dopant;
-    private List<String> layerComment;
+    private List<String> y = new ArrayList<String>();
+    private List<String> temperature = new ArrayList<String>();
+    private List<String> heat = new ArrayList<String>();
+    private List<String> nflow = new ArrayList<String>();
+    private List<String> dopant = new ArrayList<String>();
+    private List<String> layerComment = new ArrayList<String>();
 
     public String getSampleNumber() {
         return sampleNumber;
@@ -148,10 +142,10 @@ public class HsFromJsp {
     }
 
     public List<String> getNflow() {
-        return Nflow;
+        return nflow;
     }
     public void setNflow(List<String> nflow) {
-        Nflow = nflow;
+        this.nflow = nflow;
     }
 
     public List<String> getDopant() {
@@ -189,7 +183,7 @@ public class HsFromJsp {
         private String y;
         private String temperature;
         private String heat;
-        private String Nflow;
+        private String nflow;
         private String dopant;
         private String layerComment;
 
@@ -245,10 +239,10 @@ public class HsFromJsp {
         }
 
         public String getNflow() {
-            return Nflow;
+            return nflow;
         }
         public void setNflow(String nflow) {
-            Nflow = nflow;
+            nflow = nflow;
         }
 
         public String getDopant() {
