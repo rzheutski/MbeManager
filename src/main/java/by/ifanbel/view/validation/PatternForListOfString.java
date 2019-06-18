@@ -1,4 +1,6 @@
-package by.ifanbel.guiValidation;
+package by.ifanbel.view.validation;
+
+import by.ifanbel.view.validation.ListOfStringValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;

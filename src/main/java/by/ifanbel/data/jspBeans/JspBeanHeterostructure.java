@@ -1,13 +1,13 @@
-package by.ifanbel;
+package by.ifanbel.data.jspBeans;
 
-import by.ifanbel.guiValidation.PatternForListOfString;
+import by.ifanbel.view.validation.PatternForListOfString;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class HsFromJsp {
+public class JspBeanHeterostructure {
 
-    public HsFromJsp() {
+    public JspBeanHeterostructure() {
       layerId.add(1);
       growthMode.add("1");
       thickness.add(0.0);
@@ -28,17 +28,27 @@ public class HsFromJsp {
     private String substrate;
     private String comments;
 
+    private List<String> errorMessages = new ArrayList<>();
+
     private List<Integer> layerId = new ArrayList<Integer>();
     private List<String> growthMode = new ArrayList<String>();
     private List<Double> thickness = new ArrayList<Double>();
 
-    @PatternForListOfString (regexp = "((1(\\.0+)?)|(0\\.\\d*))(-((1(\\.0+)?)|(0\\.\\d*)))?", message = "Неверно задан параметр x")
+    @PatternForListOfString (regexp = "(((1|0)(\\.0+)?)|(0\\.\\d*))(-(((1|0)(\\.0+)?)|(0\\.\\d*)))?", message = "Неверно задан параметр \"x\"")
     private List<String> x = new ArrayList<String>();
 
+    @PatternForListOfString (regexp = "(((1|0)(\\.0+)?)|(0\\.\\d*))(-(((1|0)(\\.0+)?)|(0\\.\\d*)))?", message = "Неверно задан параметр \"y\"")
     private List<String> y = new ArrayList<String>();
+
+    @PatternForListOfString (regexp = "([0-9]+[.,]?[0-9]+)(-[0-9]+[.,]?[0-9]+)?", message = "Неверно задан параметр \"Температура\"")
     private List<String> temperature = new ArrayList<String>();
+
+    @PatternForListOfString (regexp = "((100([.,]0*)?)|([0-9]{1,2}([.,][0-9]+)?))(-((100([.,]0*)?)|([0-9]{1,2}([.,][0-9]+)?)))?", message = "Неверно задан параметр \"Нагрев подложки\"")
     private List<String> heat = new ArrayList<String>();
+
+    @PatternForListOfString (regexp = "([0-9]+([.,][0-9]+)?)(-[0-9]+([.,][0-9]+)?)?", message = "Неверно задан параметр \"Поток N*/NH3\"")
     private List<String> nflow = new ArrayList<String>();
+
     private List<String> dopant = new ArrayList<String>();
     private List<String> layerComment = new ArrayList<String>();
 
@@ -91,10 +101,16 @@ public class HsFromJsp {
         this.comments = comments;
     }
 
+    public List<String> getErrorMessages() {
+        return errorMessages;
+    }
+    public void setErrorMessages(List<String> errorMessages) {
+        this.errorMessages = errorMessages;
+    }
+
     public List<Integer> getLayerId() {
         return layerId;
     }
-
     public void setLayerId(List<Integer> layerId) {
         this.layerId = layerId;
     }
@@ -163,100 +179,4 @@ public class HsFromJsp {
     }
 
 
-
-
-/*    class LayerFromJsp {
-
-        LayerFromJsp() {
-            number = 58;
-            growthMode = "74";
-        }
-
-        LayerFromJsp(String s) {
-            growthMode = s;
-        }
-
-        private Integer number = 5;
-        private String growthMode;
-        private Double thickness;
-        private String x;
-        private String y;
-        private String temperature;
-        private String heat;
-        private String nflow;
-        private String dopant;
-        private String layerComment;
-
-
-
-        public Integer getNumber() {
-            return number;
-        }
-        public void setNumber(Integer number) {
-            this.number = number;
-        }
-
-        public String getGrowthMode() {
-            return growthMode;
-        }
-        public void setGrowthMode(String growthMode) {
-            this.growthMode = growthMode;
-        }
-
-        public Double getThickness() {
-            return thickness;
-        }
-        public void setThickness(Double thickness) {
-            this.thickness = thickness;
-        }
-
-        public String getX() {
-            return x;
-        }
-        public void setX(String x) {
-            this.x = x;
-        }
-
-        public String getY() {
-            return y;
-        }
-        public void setY(String y) {
-            this.y = y;
-        }
-
-        public String getTemperature() {
-            return temperature;
-        }
-        public void setTemperature(String temperature) {
-            this.temperature = temperature;
-        }
-
-        public String getHeat() {
-            return heat;
-        }
-        public void setHeat(String heat) {
-            this.heat = heat;
-        }
-
-        public String getNflow() {
-            return nflow;
-        }
-        public void setNflow(String nflow) {
-            nflow = nflow;
-        }
-
-        public String getDopant() {
-            return dopant;
-        }
-        public void setDopant(String dopant) {
-            this.dopant = dopant;
-        }
-
-        public String getLayerComment() {
-            return layerComment;
-        }
-        public void setLayerComment(String layerComment) {
-            this.layerComment = layerComment;
-        }
-    }*/
 }

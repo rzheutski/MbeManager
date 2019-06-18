@@ -5,12 +5,11 @@
 <html>
 <head>
     <title></title>
-    <%--<link rel="stylesheet" href="design-edit-styles.css">--%>
     <link rel="stylesheet" href="<c:url value="/resources/css/design-edit-styles.css"/>">
 </head>
 
 <body>
-<sf:form modelAttribute="hsFromJsp" action="saveHeterostructure">
+<sf:form modelAttribute="jspBeanHeterostructure" action="saveHeterostructure">
 <div class=content1>
 <header class="browse-header">
     <p>Создать / редактировать гетероструктуру</p>
@@ -22,18 +21,18 @@
                 <sf:input type="text" autocomplete="off" path="sampleNumber"/></p>
             <p><b>Дата</b>
                 <sf:input type="date" path="date" class="unstyled" name="date"/></p>
-                 <p>Выполнил<sf:input class="growers" type="text" path="growersLastNames"/></p>
+                 <p><b>Выполнил</b><sf:input class="growers" type="text" path="growersLastNames"/></p>
         </div>
         <div class=row1>
-            <p>Номер пластины<sf:input type="text" autocomplete="off"  path="waferNumber"/></p>
-            <p>Диаметр пластины
+            <p><b>Номер пластины</b><sf:input type="text" autocomplete="off"  path="waferNumber"/></p>
+            <p><b>Диаметр пластины</b>
                 <sf:input path="waferSize" autocomplete="off" list="waferSizeOptions"/>
                 <datalist id="waferSizeOptions">
                     <option value="2&quot;">
                     <option value="3&quot;">
                     <option value="4&quot;">
                 </datalist></p>
-            <p>Материал подложки<sf:input path="substrate" autocomplete="off" list="substrateTypeOptions"/>
+            <p><b>Материал подложки</b><sf:input path="substrate" autocomplete="off" list="substrateTypeOptions"/>
                 <datalist id="substrateTypeOptions">
                     <option value="Al2O3(0001)">
                     <option value="Si(111)">
@@ -43,11 +42,19 @@
         </div>
     </div>
     <div class=commentSection>
-        <p>Комментарии<br>
+        <p><b>Комментарии</b><br>
             <sf:textarea class="comments" autocomplete="off" path="comments"></sf:textarea>
         </p>
     </div>
 </div>
+
+    <%--<sf:textarea id="error" path="errorMessages" readonly="true" type="text" style="height:5em"/>--%>
+    <div id="error">
+        <c:forEach items="${jspBeanHeterostructure.errorMessages}" var="errorMessage" varStatus="loop">
+            <br>
+            <i>${jspBeanHeterostructure.errorMessages[loop.index]}</i>
+        </c:forEach>
+    </div>
 
 
 <table id="editTab" class="sortable" border="0" align="center" onclick="rowNumbering(this.id)">
@@ -71,45 +78,45 @@
     </tr>
 
 
-    <c:forEach items="${hsFromJsp.layerId}" var="id" varStatus="loop">
+    <c:forEach items="${jspBeanHeterostructure.layerId}" var="id" varStatus="loop">
 
     <tr id="layerRow" >
         <td align="center"><input id="inputAsLabel" readonly type="text" name="layerId" value="${id}"/></td>
         <td align="center">
-            <select id="mode" name="growthMode" value="${hsFromJsp.growthMode[loop.index]}" width = "5em">
+            <select id="mode" name="growthMode" value="${jspBeanHeterostructure.growthMode[loop.index]}" width = "5em">
                 <option value="1"
-                <c:if test="${hsFromJsp.growthMode[loop.index] == 1}">
+                <c:if test="${jspBeanHeterostructure.growthMode[loop.index] == 1}">
                         <c:out value="selected"/></c:if>
                 >NH<sub>3</sub></option>
                 <option value="2"
-                        <c:if test="${hsFromJsp.growthMode[loop.index] == 2}">
+                        <c:if test="${jspBeanHeterostructure.growthMode[loop.index] == 2}">
                             <c:out value="selected"/></c:if>
                 >N*</option>
             </select>
         </td>
-        <td align="center"><input type="number" name="thickness" autocomplete="off" value="${hsFromJsp.thickness[loop.index]}" size="7"/></td>
-        <td align="center"><input type="text" name="x" autocomplete="off" value="${hsFromJsp.x[loop.index]}" size="7"/></td>
-        <td align="center"><input type="text" name="y" autocomplete="off" value="${hsFromJsp.y[loop.index]}" size="7"/></td>
-        <td align="center"><input type="text" name="temperature" autocomplete="off" value="${hsFromJsp.temperature[loop.index]}" size="7"/></td>
-        <td align="center"><input type="text" name="heat" autocomplete="off" value="${hsFromJsp.heat[loop.index]}" size="7"/></td>
-        <td align="center"><input type="text" name="nflow" autocomplete="off" value="${hsFromJsp.nflow[loop.index]}" size="7"/></td>
+        <td align="center"><input type="number" name="thickness" autocomplete="off" value="${jspBeanHeterostructure.thickness[loop.index]}" size="7"/></td>
+        <td align="center"><input type="text" name="x" autocomplete="off" value="${jspBeanHeterostructure.x[loop.index]}" size="7"/></td>
+        <td align="center"><input type="text" name="y" autocomplete="off" value="${jspBeanHeterostructure.y[loop.index]}" size="7"/></td>
+        <td align="center"><input type="text" name="temperature" autocomplete="off" value="${jspBeanHeterostructure.temperature[loop.index]}" size="7"/></td>
+        <td align="center"><input type="text" name="heat" autocomplete="off" value="${jspBeanHeterostructure.heat[loop.index]}" size="7"/></td>
+        <td align="center"><input type="text" name="nflow" autocomplete="off" value="${jspBeanHeterostructure.nflow[loop.index]}" size="7"/></td>
         <td align="center">
-            <select name="dopant" value="${hsFromJsp.dopant[loop.index]}">
+            <select name="dopant" value="${jspBeanHeterostructure.dopant[loop.index]}">
                 <option value="1"
-                        <c:if test="${hsFromJsp.dopant[loop.index] == 1}">
+                        <c:if test="${jspBeanHeterostructure.dopant[loop.index] == 1}">
                             <c:out value="selected"/></c:if>
                 >нет</option>
                 <option value="2"
-                        <c:if test="${hsFromJsp.dopant[loop.index] == 2}">
+                        <c:if test="${jspBeanHeterostructure.dopant[loop.index] == 2}">
                             <c:out value="selected"/></c:if>
                 >Si</option>
                 <option value="3"
-                        <c:if test="${hsFromJsp.dopant[loop.index] == 3}">
+                        <c:if test="${jspBeanHeterostructure.dopant[loop.index] == 3}">
                             <c:out value="selected"/></c:if>
                 >Mg</option>
             </select>
         </td>
-        <td align="center"><input type="text" name="layerComment" autocomplete="off" value="${hsFromJsp.layerComment[loop.index]}" size="7"/></td>
+        <td align="center"><input type="text" name="layerComment" autocomplete="off" value="${jspBeanHeterostructure.layerComment[loop.index]}" size="7"/></td>
 
 
         <td id="buttonsCells" align="center">

@@ -20,13 +20,13 @@
         <put-attribute name="body" value="/WEB-INF/views/bodyfragments/_home.jsp" />
     </definition>
 
-    <!-- Browse HsFromJsp Page -->
+    <!-- Browse JspBeanHeterostructure Page -->
     <definition name="browseHeterostructurePage" extends="base.definition">
         <put-attribute name="title" value="Журнал гетероструктур" />
         <put-attribute name="body" value="/WEB-INF/views/bodyfragments/_browseHS.jsp" />
     </definition>
 
-    <!-- Create HsFromJsp Page -->
+    <!-- Create JspBeanHeterostructure Page -->
     <definition name="editHeterostructurePage" extends="base.definition">
         <put-attribute name="title" value="Добавить гетероструктуру" />
         <put-attribute name="body" value="/WEB-INF/views/bodyfragments/_createHS.jsp" />

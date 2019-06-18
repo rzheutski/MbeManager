@@ -4,6 +4,8 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 
+import by.ifanbel.configurations.data.JpaRepoConfig;
+import by.ifanbel.configurations.view.ViewConfig;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
@@ -14,7 +16,8 @@ public class SpringWebInitializer implements WebApplicationInitializer {
 
         AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
 
-        ctx.register(TilesApplicationConfig.class);
+        ctx.register(ViewConfig.class);
+        ctx.register(JpaRepoConfig.class);
 
         container.addListener(new ContextLoaderListener(ctx));
 
@@ -22,6 +25,7 @@ public class SpringWebInitializer implements WebApplicationInitializer {
                 "dispatcher", new DispatcherServlet(ctx));
         servlet.setLoadOnStartup(1);
         servlet.addMapping("/");
+
 
     }
 }
