@@ -5,6 +5,7 @@ import by.ifanbel.data.databaseEntities.Heterostructure;
 import by.ifanbel.data.databaseEntities.SvgDesign;
 import by.ifanbel.data.jspBeans.JspBeanHeterostructure;
 import by.ifanbel.data.repositories.HeterostructureRepo;
+import by.ifanbel.data.repositories.LayerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,6 +27,8 @@ public class EntryPoint {
 
     @Autowired
     private HeterostructureRepo heterostructureRepo;
+    @Autowired
+    private LayerRepo layerRepo;
    /* @Autowired
     private Bank bank;*/
 
@@ -67,7 +70,8 @@ public class EntryPoint {
             e.printStackTrace();
         }
 
-        heterostructureRepo.saveAndFlush(heterostructure);
+     //   heterostructureRepo.saveAndFlush(heterostructure);
+        layerRepo.saveAndFlush(heterostructure.getLayer(0));
 
 
 
